@@ -18,7 +18,19 @@ body {
   align-items: center;
 }
 
-.navbar .logo {
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 50px;
+  width: auto;
+  border-radius: 5px;
+}
+
+.logo-text {
   font-size: 1.5rem;
   font-weight: bold;
 }
