@@ -1,50 +1,58 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Saya Diesel Trading - Reliable Diesel Supply Services in Dubai" />
-  <title>Saya Diesel Trading</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saya Diesel Trading</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="hero">
-    <div class="overlay">
-      <div class="logo-container">
-        <img src="IMG_4132.jpeg" alt="Saya Diesel Logo" class="logo">
-      </div>
-      <h1>Saya Diesel Trading</h1>
-      <p>Premium Diesel Supply Services - Dubai</p>
-      <a href="https://wa.me/9719109676" class="btn">Contact on WhatsApp</a>
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1 class="logo">Saya Diesel Trading</h1>
+      <p class="slogan">Powering Dubai's Industries</p>
+      <a href="#contact" class="btn">Contact Us</a>
     </div>
-  </header>
-
-  <section class="about">
-    <h2>About Us</h2>
-    <p>We are a trusted diesel trading company based in Dubai, offering high-quality fuel supply and logistics with reliability and professionalism.</p>
   </section>
-
-  <section class="services">
+  <section id="services">
     <h2>Our Services</h2>
-    <div class="service-cards">
-      <div class="card">High-Quality Diesel Trading</div>
-      <div class="card">Bulk Supply to Garages & Construction Sites</div>
-      <div class="card">Logistics & Delivery Services</div>
+    <div class="services-container">
+      <div class="service-item">
+        <img src="images/service1.jpg" alt="Diesel Truck">
+        <h3>Diesel Fuel Supply</h3>
+        <p>Bulk diesel fuel delivered for industries and vehicles.</p>
+      </div>
+      <div class="service-item">
+        <img src="images/service2.jpg" alt="Marine Bunkering">
+        <h3>Marine Bunkering</h3>
+        <p>High-quality marine fuel and bunkering solutions.</p>
+      </div>
+      <div class="service-item">
+        <img src="images/service3.jpg" alt="Lubricants">
+        <h3>Lubricants & Oils</h3>
+        <p>Premium lubricants to keep your machinery running smoothly.</p>
+      </div>
     </div>
   </section>
-
-  <section class="contact">
+  <section id="contact">
     <h2>Contact Us</h2>
-    <p><strong>Phone:</strong> 092242755</p>
-    <p><strong>Email:</strong> info@sayadieseltrading.in</p>
-    <p><strong>Location:</strong> Dubai, UAE</p>
+    <form action="mailto:info@sayadieseltrading.in" method="post" enctype="text/plain">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="Name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="Email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="Message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn submit-btn">Send Message</button>
+    </form>
   </section>
-
-  <footer>
-    <p>&copy; 2025 Saya Diesel Trading. All rights reserved.</p>
-  </footer>
+  <a href="https://wa.me/9719109676" target="_blank" class="whatsapp-btn">Chat on WhatsApp</a>
 </body>
 </html>

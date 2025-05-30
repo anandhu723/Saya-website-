@@ -1,80 +1,136 @@
-
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #333;
-  background: #fff;
+/* Global Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --primary: #002b45;
+  --accent: #f2a900;
+  --light: #ffffff;
+  --dark: #333333;
+  --bg-light: #f4f4f4;
+  --font: 'Poppins', sans-serif;
 }
-
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font);
+  line-height: 1.6;
+  color: var(--dark);
+  background: var(--bg-light);
+}
 .hero {
-  background: url('A_high-resolution_photograph_captures_a_large_dies.png') center/cover no-repeat;
-  height: 100vh;
-  color: white;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-}
-
-.hero .overlay {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 2rem;
   text-align: center;
+  height: 100vh;
+  color: var(--light);
+  background: url('images/hero.jpg') center/cover no-repeat;
 }
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 1;
 }
-
-.hero p {
-  font-size: 1.2rem;
-}
-
+.hero-content { position: relative; z-index: 2; }
+.logo { font-size: 2.5rem; font-weight: 800; }
+.slogan { font-size: 1.2rem; margin: 0.5rem 0 1rem; }
 .btn {
   display: inline-block;
-  padding: 10px 20px;
-  background: #d62828;
-  color: white;
+  background: var(--accent);
+  color: var(--dark);
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
   text-decoration: none;
-  border-radius: 5px;
-  margin-top: 1rem;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
-
-section {
-  padding: 4rem 2rem;
+.btn:hover {
+  transform: scale(1.05);
+  background: #ffc700;
+}
+#services {
+  padding: 4rem 1rem;
   text-align: center;
+  background: var(--bg-light);
 }
-
-.service-cards {
+#services h2 { margin-bottom: 2rem; color: var(--primary); }
+.services-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
-
-.card {
-  background: #f8f9fa;
-  padding: 1rem 2rem;
+.service-item {
+  background: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-footer {
-  background: #333;
-  color: white;
+.service-item img { width: 100%; display: block; }
+.service-item h3 {
+  background: var(--primary);
+  color: var(--light);
+  padding: 0.5rem;
+}
+.service-item p { padding: 0.5rem; color: var(--dark); }
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+#contact {
+  padding: 4rem 1rem;
+  background: #fff;
   text-align: center;
-  padding: 1rem 0;
 }
-
-.logo-container {
-  text-align: center;
+#contact h2 { margin-bottom: 2rem; color: var(--primary); }
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
 }
-.logo {
-  max-width: 150px;
-  height: auto;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+.form-group { margin-bottom: 1rem; }
+label { display: block; margin-bottom: 0.3rem; font-weight: 600; }
+input, textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+.submit-btn {
+  background: var(--primary);
+  color: var(--light);
+  transition: background 0.3s ease;
+}
+.submit-btn:hover { background: #003a5e; }
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: #fff;
+  padding: 0.7rem 1rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+.whatsapp-btn:hover { background: #1ebe5f; }
+@media (max-width: 768px) {
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .service-item {
+    width: 100%;
+    max-width: 400px;
+  }
 }
