@@ -5,8 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Saya Diesel Trading L.L.C</title>
   <link href="styles.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <nav class="navbar">
+    <div class="container">
+      <h1 class="logo">Saya Diesel</h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <header class="hero">
     <div class="overlay">
       <h1>SAYA DIESEL TRADING L.L.C</h1>
@@ -14,21 +26,26 @@
     </div>
   </header>
 
-  <section class="about">
+  <section class="about" id="about">
     <h2>About Us</h2>
     <p>Saya Diesel Trading is committed to delivering top-quality diesel with fast, reliable service across the UAE. Based in Fujairah, we serve businesses and industries that depend on consistent fuel delivery.</p>
   </section>
 
-  <section class="services">
+  <section class="services" id="services">
     <h2>Our Services</h2>
-    <ul>
-      <li>Bulk Diesel Supply</li>
-      <li>On-site Refueling</li>
-      <li>Fleet Fuel Management</li>
-    </ul>
+    <div class="service-columns">
+      <ul>
+        <li>Bulk Diesel Supply</li>
+        <li>On-site Refueling</li>
+      </ul>
+      <ul>
+        <li>Fleet Fuel Management</li>
+        <li>Emergency Fuel Delivery</li>
+      </ul>
+    </div>
   </section>
 
-  <section class="contact">
+  <section class="contact" id="contact">
     <h2>Contact Us</h2>
     <p>📍 Fujairah, UAE</p>
     <p>📞 092242755</p>
@@ -38,5 +55,7 @@
   <footer>
     <p>&copy; 2025 Saya Diesel Trading L.L.C</p>
   </footer>
+
+  <a href="https://wa.me/97192242755" class="whatsapp-float" target="_blank">💬</a>
 </body>
 </html>
