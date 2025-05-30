@@ -1,0 +1,184 @@
+/* styles.css */
+
+/* Global Reset */
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary: #002b45;      /* Dark blue/navy */
+  --accent: #f2a900;       /* Gold accent */
+  --light: #ffffff;
+  --dark: #333333;
+  --bg-light: #f4f4f4;
+  --font: 'Poppins', sans-serif;
+}
+/* Smooth scrolling for anchor links */
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  line-height: 1.6;
+  color: var(--dark);
+  background: var(--bg-light);
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  color: var(--light);
+  background: url('images/hero.jpg') center/cover no-repeat;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6); /* dark overlay */
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+.logo {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+.slogan {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 1rem;
+}
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--dark);
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.btn:hover {
+  transform: scale(1.05);
+  background: #ffc700;
+}
+
+/* Services Section */
+#services {
+  padding: 4rem 1rem;
+  text-align: center;
+  background: var(--bg-light);
+}
+#services h2 {
+  margin-bottom: 2rem;
+  color: var(--primary);
+}
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.service-item {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-item img {
+  width: 100%;
+  display: block;
+}
+.service-item h3 {
+  background: var(--primary);
+  color: var(--light);
+  padding: 0.5rem;
+}
+.service-item p {
+  padding: 0.5rem;
+  color: var(--dark);
+}
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Contact Section */
+#contact {
+  padding: 4rem 1rem;
+  background: #fff;
+  text-align: center;
+}
+#contact h2 {
+  margin-bottom: 2rem;
+  color: var(--primary);
+}
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+.form-group {
+  margin-bottom: 1rem;
+}
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+input, textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+.submit-btn {
+  background: var(--primary);
+  color: var(--light);
+  transition: background 0.3s ease;
+}
+.submit-btn:hover {
+  background: #003a5e;
+}
+
+/* WhatsApp Chat Button */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366; /* WhatsApp green */
+  color: #fff;
+  padding: 0.7rem 1rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+.whatsapp-btn:hover {
+  background: #1ebe5f;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .service-item {
+    width: 100%;
+    max-width: 400px;
+  }
+}
